@@ -1,0 +1,81 @@
+:root {
+    --primary-color: #4a6b5d; /* Hijau Sage Aesthetic */
+    --bg-color: #f4f6f4;
+    --card-bg: #ffffff;
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #444;
+}
+
+.cv-wrapper {
+    max-width: 900px;
+    margin: 40px auto;
+}
+
+.cv-card {
+    background: var(--card-bg);
+    border: none;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(74, 107, 93, 0.08);
+    overflow: hidden;
+}
+
+.header-section {
+    background: linear-gradient(135deg, #4a6b5d, #324a40);
+    color: white;
+    padding: 40px;
+}
+
+.profile-badge {
+    width: 85px;
+    height: 85px;
+    background-color: #ffffff;
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.8rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.section-heading {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #e2ebe6;
+}
+
+.custom-badge {
+    background-color: #e2ebe6;
+    color: var(--primary-color);
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+}
+
+/* Custom Style untuk Accordion Bootstrap */
+.accordion-button:not(.collapsed) {
+    color: var(--primary-color);
+    background-color: #e2ebe6;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: rgba(74, 107, 93, 0.25);
+}
+
+p, li {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
