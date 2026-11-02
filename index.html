@@ -4,76 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Curriculum Vitae - Amila Azkiya Rahma</title>
-    <!-- Bootstrap CSS CDN -->
+    <!-- 1. Bootstrap CSS CDN -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        :root {
-            --primary-color: #4a6b5d; /* Hijau sage aesthetic */
-            --bg-color: #f4f6f4;
-            --card-bg: #ffffff;
-        }
-        body {
-            background-color: var(--bg-color);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #444;
-        }
-        .cv-wrapper {
-            max-width: 900px;
-            margin: 40px auto;
-        }
-        .cv-card {
-            background: var(--card-bg);
-            border: none;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(74, 107, 93, 0.08);
-            overflow: hidden;
-        }
-        .header-section {
-            background: linear-gradient(135deg, #4a6b5d, #324a40);
-            color: white;
-            padding: 40px;
-        }
-        .profile-badge {
-            width: 85px;
-            height: 85px;
-            background-color: #ffffff;
-            color: var(--primary-color);
-            font-weight: bold;
-            font-size: 1.8rem;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        }
-        .section-heading {
-            font-size: 0.95rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 15px;
-            position: relative;
-            padding-bottom: 5px;
-            border-bottom: 2px solid #e2ebe6;
-        }
-        .custom-badge {
-            background-color: #e2ebe6;
-            color: var(--primary-color);
-            font-weight: 600;
-            padding: 6px 12px;
-            border-radius: 20px;
-            font-size: 0.85rem;
-        }
-        p, li {
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-    </style>
+    <!-- 2. External CSS File -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <div class="container cv-wrapper">
+        <!-- Item Bootstrap 1: Card -->
         <div class="card cv-card">
             
             <!-- Header Unik dengan Inisial & Nuansa Sage Green -->
@@ -86,14 +25,15 @@
                 </div>
             </div>
 
-            <!-- Konten Utama (2 Kolom Modern) -->
+            <!-- Konten Utama -->
             <div class="card-body p-4 p-md-5">
+                <!-- Item Bootstrap 2: Grid System (row & col) -->
                 <div class="row">
                     
                     <!-- Kolom Kiri -->
                     <div class="col-md-5 pe-md-4 border-end-md">
                         
-                        <!-- Kontak & Info -->
+                        <!-- Informasi Kontak -->
                         <div class="mb-4">
                             <div class="section-heading">Informasi Kontak</div>
                             <p class="mb-1 text-muted"><strong>Email:</strong> amilaazra192@gmail.com</p>
@@ -101,11 +41,11 @@
                             <p class="mb-1 text-muted"><strong>Status:</strong> Mahasiswa</p>
                         </div>
 
-                        <!-- Keahlian (Bentuk Pil/Badge Aesthetic) -->
+                        <!-- Keahlian -->
                         <div class="mb-4">
                             <div class="section-heading">Keahlian</div>
                             <div class="d-flex flex-wrap gap-2">
-                                <span class="custom-badge">Manajemen Databese</span>
+                                <span class="custom-badge">Manajemen Database</span>
                                 <span class="custom-badge">Logika & Algoritma</span>
                                 <span class="custom-badge">Desain & Presentasi</span>
                             </div>
@@ -114,8 +54,8 @@
                         <!-- Organisasi -->
                         <div class="mb-4">
                             <div class="section-heading">Organisasi</div>
-                            <p class="fw-bold mb-1">Anggota Aktif</p>
-                            <p class="text-muted small">Berpartisipasi dalam kegiatan kampus.</p>
+                            <p class="fw-bold mb-1">Diskusi Pemrograman</p>
+                            <p class="text-muted small">Berpartisipasi aktif dalam kegiatan diskusi pemrograman.</p>
                         </div>
 
                     </div>
@@ -127,7 +67,7 @@
                         <div class="mb-4">
                             <div class="section-heading">Profil Singkat</div>
                             <p class="text-secondary">
-                                Mahasiswa Politeknik Manahijul Huda Program Studi Teknologi Rekayasa Perangkat Lunak (TRPL). Memiliki ketertarikan mendalam pada pengembangan sistem, pemograman, dan siap mengeksplorasi teknologi baru.
+                                Mahasiswa Politeknik Manahijul Huda Program Studi Teknologi Rekayasa Perangkat Lunak (TRPL). Memiliki ketertarikan pada pemrograman web, manajemen database, dan siap terus mengeksplorasi ilmu teknologi perancangan sistem.
                             </p>
                         </div>
 
@@ -148,12 +88,51 @@
                             </div>
                         </div>
 
-                        <!-- Pengalaman -->
+                        <!-- Pengalaman & Proyek (Item Bootstrap 3: Accordion) -->
                         <div class="mb-4">
                             <div class="section-heading">Pengalaman & Proyek</div>
-                            <p class="fw-bold mb-1">Pengembangan Sistem & Web</p>
-                            <p class="text-muted small"> Praktikum pemograman menggunakan VS Code dan Command Prompt, Perancangan dan pengelolaan basis data,
-membuat desain presentasi yang menarik.</p>
+                            <div class="accordion" id="accordionPengalaman">
+                                
+                                <div class="accordion-item border-0 mb-2 shadow-sm">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                            Pengembangan Perangkat Lunak
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionPengalaman">
+                                        <div class="accordion-body text-muted small">
+                                            Praktikum pemrograman menggunakan VS Code dan Command Prompt.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item border-0 mb-2 shadow-sm">
+                                    <h2 class="accordion-header" id="headingTwo">
+                                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                            Manajemen Database
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionPengalaman">
+                                        <div class="accordion-body text-muted small">
+                                            Perancangan dan pengelolaan basis data.
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="accordion-item border-0 shadow-sm">
+                                    <h2 class="accordion-header" id="headingThree">
+                                        <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                            Desain & Presentasi
+                                        </button>
+                                    </h2>
+                                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionPengalaman">
+                                        <div class="accordion-body text-muted small">
+                                            Pembuatan materi presentasi yang menarik menggunakan PowerPoint (PPT).
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
 
                     </div>
@@ -164,5 +143,7 @@ membuat desain presentasi yang menarik.</p>
         </div>
     </div>
 
+    <!-- Bootstrap JS Bundle (Penting agar Accordion bisa di-klik) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
